@@ -1,0 +1,10 @@
+<div class="card">
+    <h3>
+        {{ project.title }}
+    </h3>
+    <br>
+    <img src= "{{imagesPath}}{{project.img}}" alt="" class="icons">
+    <ul class='proj-description'>
+        <li *ngFor="let desc of project.description" [innerText]="desc"></li>
+    </ul>
+</div>

@@ -1,0 +1,31 @@
+{
+    "projects":
+    [
+        {
+        "title": "Google Assistant Conversation Action for AUB",
+        "img": "mobile.png",
+        "description":[
+            "The aim of this project is to provide a voice activated information retrieval system for AUB students, faculty, and staff.",
+            "Students may authenticate their emails on their phone before using the assistant, and then ask university related questions, such as registration information, and receive personalized answers.",
+            "Scrape data from a static page using Java to store in our database.",
+            " Retrieve the information from the database according to the users’ verbal request."
+        ]
+        },
+        {
+            "title": "Web Application Play Store",
+            "img": "playstore.png",
+            "description":[
+                "The aim of this project is to create a web application that is a play store allowing users to sign up then access and download games, movies, applications, and books.",
+                "The information about each book/movie is stored in a database, and upon a user clicking on an item, it's description/cast... is shown"
+            ]
+        },
+        {
+            "title": "Relational DBMS",
+            "img": "database.png",
+            "description":[
+                "The aim of this project is to make a relational DBMS to manage the inventory of a clothing shop.",
+                "CRUD operations"
+            ]
+        }
+    ]
+}

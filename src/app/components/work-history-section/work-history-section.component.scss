@@ -1,0 +1,25 @@
+$darkGrey: rgb(52, 51, 61);
+
+.companies-title{
+    color: $darkGrey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.companies-div {
+    margin-top: 7%;
+    text-align: center;
+}
+
+.company-logo {
+    width: 10%;
+    height: 10%;
+    margin: 3% 7% 5% 7%;
+}
+
+.company-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}

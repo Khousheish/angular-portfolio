@@ -1,0 +1,34 @@
+$darkGrey: rgb(52, 51, 61);
+
+.cover {
+    padding-top: 3%;
+    text-align: center;
+}
+
+.intro-title {
+    font-size: 50px;
+    color: $darkGrey;
+    clear: both;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.intro-par {
+    font-size: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+}
+
+.comp {
+    height: 20%;
+    width: 30%;
+    padding: 13%;
+    display: block;
+    margin: auto;
+    padding-bottom: 0%;
+}
+
+

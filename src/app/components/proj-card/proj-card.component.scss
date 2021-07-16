@@ -1,0 +1,21 @@
+.card {
+    background-color: rgb(255, 255, 255);
+    border: solid (255, 255, 255) 1px;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 2%;
+    box-shadow: 0 0 4px rgb(242, 242, 242);
+    color: black;
+    height: 100%;
+    max-width: 400px;
+}
+
+.proj-description {
+    position: relative;
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+    padding: 0%;
+}

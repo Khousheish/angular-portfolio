@@ -1,0 +1,6 @@
+<div>
+    <input id="testimonial-1-btn"  type="radio" name="testimonials" class='testimonial-btn' checked>
+    <label for="testimonial-1-btn" (click)="firstSelected = true; secondSelected = false; show()" [ngClass]="{ 'selected-testimonial-btn-label': firstSelected , 'unselected-testimonial-btn-label': secondSelected }" class="selected-testimonial-btn-label"></label>
+    <input id="testimonial-2-btn"  type="radio" name="testimonials" class="testimonial-btn">
+    <label for="testimonial-2-btn" (click)="secondSelected = true; firstSelected = false; show()" [ngClass]="{ 'selected-testimonial-btn-label': secondSelected, 'unselected-testimonial-btn-label': firstSelected }" class="unselected-testimonial-btn-label"></label>
+</div>

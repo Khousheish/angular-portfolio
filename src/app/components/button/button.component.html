@@ -1,0 +1,9 @@
+<button 
+    [ngStyle] = "{ 'background-color' : bgColor, 'color' : txtColor, 'border-color' : borderColor, 'width': width, 'padding': padding }" 
+    class="btn"
+    (click) = "onClick()"
+    (mouseover) = "onHover()"
+    (mouseout) = "outHover()"
+>
+    {{ text }}
+</button>

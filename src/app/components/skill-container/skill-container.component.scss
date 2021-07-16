@@ -1,0 +1,38 @@
+$lightGrey: rgb(224, 222, 227);
+$white: rgb(255, 255, 255);
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+.skill-container {
+    background-color: $white;
+    border-radius: 25px;
+    box-shadow: 0 0 4px rgb(242, 242, 242);
+    width: 60%;
+    padding: 0;
+    color: black;
+    display: inline-block;
+}
+
+.left, .right, .center {
+    float: left;
+    width: 33%;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.center {
+    border-right: solid $lightGrey 1px;
+    border-left: solid $lightGrey 1px;
+}
+
+.skill-container:after {
+    clear: both;
+}
+
+ul {
+    list-style: none;
+    padding: 0%;
+}
