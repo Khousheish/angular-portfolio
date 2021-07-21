@@ -1,51 +1,52 @@
 $navy: rgb(13, 3, 102);
 $lilac: rgb(129, 66, 245);
+$red: #ff0000;
 
-.start-proj-container{
-    background-color: $navy;
-    border: 1px $navy solid;
-    color: white;
-    width: 60%;
-    border-radius: 25px;
-    margin: auto;
-    padding: 2%;
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    top: -15%;
-    box-shadow: 0 0 4px $navy;
+.start-proj-container {
+  background-color: $navy;
+  border: 1px $navy solid;
+  border-radius: 25px;
+  box-shadow: 0 0 4px $navy;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  padding: 2%;
+  position: relative;
+  top: -15%;
+  width: 60%;
 }
 
-.start-proj-item{
-    width: 33%;
-    flex-grow: 1;
+.start-proj-item {
+  flex-grow: 1;
+  width: 33%;
 }
 
-.item1{
-    font-weight: bold;
-    font-size: x-large;
+.item1 {
+  font-size: x-large;
+  font-weight: bold;
 }
 
-.item2{
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.item2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
 }
 
 .proj-btn {
-    border: 2px $lilac solid;
-    background-color: $navy;
-    border-radius: 30px;
-    padding: 1%;
-    font-weight: bold;
-    color: white;
-    width: 50%;
-    height: 50px;
+  background-color: $navy;
+  border: 2px $lilac solid;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+  padding: 1%;
+  width: 50%;
 }
 
-.thing:hover{
-    color: red;
+.thing:hover {
+  color: $red;
 }
 
-.proj-btn:hover{
-    background-color: $lilac;
+.proj-btn:hover {
+  background-color: $lilac;
 }

@@ -1,29 +1,29 @@
 $lilac: rgb(129, 66, 245);
-$lightGrey: rgb(224, 222, 227);
+$light-grey: rgb(224, 222, 227);
 
 .testimonial-btn {
-    display: none;
+  display: none;
 }
 
 .selected-testimonial-btn {
-    color: $lilac;
+  color: $lilac;
 }
 
 .selected-testimonial-btn-label {
-    border: 2px $lilac solid;
-    background-color: $lilac;
-    border-radius: 50%;
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 5px;
+  background-color: $lilac;
+  border: 2px $lilac solid;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  margin: 5px;
+  width: 10px;
 }
 
 .unselected-testimonial-btn-label {
-    border: 2px $lightGrey solid;
-    border-radius: 50%;
-    display: inline-block;
-    height: 10px;
-    width: 10px;
-    margin: 5px;
+  border: 2px $light-grey solid;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  margin: 5px;
+  width: 10px;
 }

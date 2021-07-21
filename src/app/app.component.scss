@@ -1,15 +1,13 @@
-$lightGrey: rgb(224, 222, 227);
+$light-grey: rgb(224, 222, 227);
 
-.main-container{
-    width: 70%;
-    margin: auto;
-    margin-top: 3%;
+.main-container {
+  margin: auto;
+  margin-top: 3%;
+  width: 70%;
 }
-
 
 hr {
-    border-color: $lightGrey;
-    border-top: none;
-    margin-bottom: 10%;
+  border-color: $light-grey;
+  border-top: 0;
+  margin-bottom: 10%;
 }
-
