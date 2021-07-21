@@ -6,11 +6,9 @@ import { Project } from 'src/app/project';
   templateUrl: './proj-card.component.html',
   styleUrls: ['./proj-card.component.scss'],
 })
-export class ProjCardComponent implements OnInit {
+export class ProjCardComponent {
   @Input() public project!: Project;
   @Input() public projectDescription!: string[];
   public imagesPath: string = '../../../assets/images/';
-
-  public ngOnInit(): void { }
 
 }

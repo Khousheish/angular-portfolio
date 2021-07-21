@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ag-app-skill-container',
   templateUrl: './skill-container.component.html',
   styleUrls: ['./skill-container.component.scss'],
 })
-export class SkillContainerComponent implements OnInit, AfterViewInit {
+export class SkillContainerComponent implements AfterViewInit {
   @ViewChild('skillContainerRef') private readonly skillContainerRef!: ElementRef;
   private maxHeight: number = 0;
 
@@ -22,7 +22,5 @@ export class SkillContainerComponent implements OnInit, AfterViewInit {
       (skill as HTMLElement).style.height = `${this.maxHeight}px`;
     }
   }
-
-  public ngOnInit(): void { }
 
 }

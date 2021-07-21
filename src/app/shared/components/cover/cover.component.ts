@@ -5,8 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cover.component.html',
   styleUrls: ['./cover.component.scss'],
 })
-export class CoverComponent implements OnInit {
-
-  public ngOnInit(): void { }
-
-}
+export class CoverComponent { }

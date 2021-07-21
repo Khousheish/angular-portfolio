@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { ButtonComponent } from '../button/button.component';
 
@@ -7,20 +7,21 @@ import { ButtonComponent } from '../button/button.component';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  public helloClickAccessor: () => void = HeaderComponent.helloClick;
+  public helloHoverAccessor: (arg0: ButtonComponent) => void = HeaderComponent.helloHover;
+  public helloOutHoverAccessor: (arg0: ButtonComponent) => void = HeaderComponent.helloOutHover;
 
-  public ngOnInit(): void { }
-
-  public helloClick(): void {
+  public static helloClick(): void {
     // console.log('You just pressed the "Say Hello" button.');
   }
 
-  public helloHover(btn: ButtonComponent): void {
+  public static helloHover(btn: ButtonComponent): void {
     btn.bgColor = 'rgb(129, 66, 245)';
     btn.txtColor = 'white';
   }
 
-  public helloOutHover(btn: ButtonComponent): void {
+  public static helloOutHover(btn: ButtonComponent): void {
     btn.bgColor = 'white';
     btn.txtColor = 'rgb(129, 66, 245)';
   }

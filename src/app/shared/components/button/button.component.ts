@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   @Input() public text!: String;
   @Input() public bgColor!: String;
   @Input() public txtColor!: String;
@@ -15,8 +15,6 @@ export class ButtonComponent implements OnInit {
   @Output() private readonly btnClick: EventEmitter<void> = new EventEmitter();
   @Output() private readonly btnHover: EventEmitter<ButtonComponent> = new EventEmitter();
   @Output() private readonly btnOutHover: EventEmitter<ButtonComponent> = new EventEmitter();
-
-  public ngOnInit(): void { }
 
   public onClick(): void {
     this.btnClick.emit();

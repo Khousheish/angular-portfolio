@@ -1,16 +1,14 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ag-app-testimonials',
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss'],
 })
-export class TestimonialsComponent implements OnInit, AfterViewInit {
+export class TestimonialsComponent implements AfterViewInit {
   private selectedTestimonial: string = 'testimonial1';
   @ViewChild('testimonial1') private readonly firstTestimonial!: ElementRef;
   @ViewChild('testimonial2') private readonly secondTestimonial!: ElementRef;
-
-  public ngOnInit(): void { }
 
   // toggle component visibility
   public onToggle(firstSelected: boolean): void {

@@ -5,7 +5,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   templateUrl: './purple-section.component.html',
   styleUrls: ['./purple-section.component.scss'],
 })
-export class PurpleSectionComponent implements OnInit, AfterViewInit {
+export class PurpleSectionComponent implements AfterViewInit {
   @ViewChild('purpleContainerRef') private readonly purpleContainer!: ElementRef;
 
   public ngAfterViewInit(): void {
@@ -19,7 +19,4 @@ export class PurpleSectionComponent implements OnInit, AfterViewInit {
       (this.purpleContainer.nativeElement as HTMLElement).style.marginBottom = '{childHeight}"px"';
     }
   }
-
-  public ngOnInit(): void { }
-
 }
