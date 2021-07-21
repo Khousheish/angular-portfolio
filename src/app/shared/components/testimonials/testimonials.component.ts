@@ -1,39 +1,36 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-testimonials',
+  selector: 'ag-app-testimonials',
   templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.scss']
+  styleUrls: ['./testimonials.component.scss'],
 })
-export class TestimonialsComponent implements OnInit {
-  selectedTestimonial = "testimonial1";
-  @ViewChild("testimonial1") firstTestimonial!: ElementRef;
-  @ViewChild("testimonial2") secondTestimonial!: ElementRef;
+export class TestimonialsComponent implements OnInit, AfterViewInit {
+  private selectedTestimonial: string = 'testimonial1';
+  @ViewChild('testimonial1') private readonly firstTestimonial!: ElementRef;
+  @ViewChild('testimonial2') private readonly secondTestimonial!: ElementRef;
 
-  constructor() { }
+  public ngOnInit(): void { }
 
-  ngOnInit(): void {
-  }
-
-  //toggle component visibility 
-  onToggle(firstSelected: boolean) {
+  // toggle component visibility
+  public onToggle(firstSelected: boolean): void {
     if (firstSelected) {
-      this.selectedTestimonial = "testimonial1";
-      this.secondTestimonial.nativeElement.style.display = "none";
-      this.firstTestimonial.nativeElement.style.display = "";
+      this.selectedTestimonial = 'testimonial1';
+      this.secondTestimonial.nativeElement.style.display = 'none';
+      this.firstTestimonial.nativeElement.style.display = '';
 
     }
     else {
-      this.selectedTestimonial = "testimonial2"
-      this.secondTestimonial.nativeElement.style.display = "";
-      this.firstTestimonial.nativeElement.style.display = "none";
+      this.selectedTestimonial = 'testimonial2';
+      this.secondTestimonial.nativeElement.style.display = '';
+      this.firstTestimonial.nativeElement.style.display = 'none';
     }
   }
 
-  //make the testimonials visible or invisible when this component is done rendering 
-  ngAfterViewInit() {
-    this.secondTestimonial.nativeElement.style.display = "none";
-    this.firstTestimonial.nativeElement.style.display = "";
+  // make the testimonials visible or invisible when this component is done rendering
+  public ngAfterViewInit(): void {
+    this.secondTestimonial.nativeElement.style.display = 'none';
+    this.firstTestimonial.nativeElement.style.display = '';
 
   }
 }

@@ -1,34 +1,31 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-button',
+  selector: 'ag-app-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
-  @Input() text!: String;
-  @Input() bgColor!: String;
-  @Input() txtColor!: String;
-  @Input() borderColor!: String;
-  @Input() width!: String;
-  @Input() padding!: String;
-  @Output() btnClick = new EventEmitter();
-  @Output() btnHover = new EventEmitter();
-  @Output() btnOutHover = new EventEmitter();
+  @Input() public text!: String;
+  @Input() public bgColor!: String;
+  @Input() public txtColor!: String;
+  @Input() public borderColor!: String;
+  @Input() public width!: String;
+  @Input() public padding!: String;
+  @Output() private readonly btnClick: EventEmitter<void> = new EventEmitter();
+  @Output() private readonly btnHover: EventEmitter<ButtonComponent> = new EventEmitter();
+  @Output() private readonly btnOutHover: EventEmitter<ButtonComponent> = new EventEmitter();
 
-  constructor() { }
+  public ngOnInit(): void { }
 
-  ngOnInit(): void {
-  }
-
-  onClick(){
+  public onClick(): void {
     this.btnClick.emit();
   }
-  onHover(){
+  public onHover(): void {
     this.btnHover.emit(this);
   }
 
-  outHover(){
+  public outHover(): void {
     this.btnOutHover.emit(this);
   }
 }

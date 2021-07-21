@@ -1,31 +1,28 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-skill-container',
+  selector: 'ag-app-skill-container',
   templateUrl: './skill-container.component.html',
-  styleUrls: ['./skill-container.component.scss']
+  styleUrls: ['./skill-container.component.scss'],
 })
 export class SkillContainerComponent implements OnInit, AfterViewInit {
-  @ViewChild('skillContainerRef') skillContainerRef!: ElementRef;
-  maxHeight: number = 0;
+  @ViewChild('skillContainerRef') private readonly skillContainerRef!: ElementRef;
+  private maxHeight: number = 0;
 
-  constructor() { }
-  
-  ngAfterViewInit(): void {
-    //getting the largest div to set the others to have the same size as it
-    for (let skill of this.skillContainerRef.nativeElement.children) {
+  public ngAfterViewInit(): void {
+    // getting the largest div to set the others to have the same size as it
+    for (const skill of this.skillContainerRef.nativeElement.children) {
       if (skill.offsetHeight > this.maxHeight) {
         this.maxHeight = skill.offsetHeight;
       }
     }
 
-    //giving all divs the same size
-    for (let skill of this.skillContainerRef.nativeElement.children) {
+    // giving all divs the same size
+    for (const skill of this.skillContainerRef.nativeElement.children) {
       (skill as HTMLElement).style.height = `${this.maxHeight}px`;
     }
   }
 
-  ngOnInit(): void {
-  }
+  public ngOnInit(): void { }
 
 }

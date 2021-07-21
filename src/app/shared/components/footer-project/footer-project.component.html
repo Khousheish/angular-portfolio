@@ -5,15 +5,7 @@
     <div class='start-proj-item item2'>
         Interested in working together? We should queue up a chat. I'll buy the coffee.
     </div>
-    <app-button 
-        class='start-proj-item' 
-        width = "50%" 
-        padding="5%" 
-        text="Let's do this" 
-        bgColor=" rgb(13, 3, 102)" 
-        txtColor="white" 
-        borderColor="rgb(129, 66, 245)"
-        (btnHover) = "onHover($event)"
-        (btnOutHover) = "outHover($event)"
-    ></app-button>
+    <ag-app-button class='start-proj-item' width="50%" padding="5%" text="Let's do this" bgColor=" rgb(13, 3, 102)"
+        txtColor="white" borderColor="rgb(129, 66, 245)" (btnHover)="onHover($event)" (btnOutHover)="outHover($event)">
+    </ag-app-button>
 </div>

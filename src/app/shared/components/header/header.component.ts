@@ -1,30 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'app-header',
+  selector: 'ag-app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public ngOnInit(): void { }
 
-  ngOnInit(): void {
+  public helloClick(): void {
+    // console.log('You just pressed the "Say Hello" button.');
   }
 
-  helloClick(){
-    console.log('You just pressed the "Say Hello" button.')
+  public helloHover(btn: ButtonComponent): void {
+    btn.bgColor = 'rgb(129, 66, 245)';
+    btn.txtColor = 'white';
   }
 
-  helloHover(btn : ButtonComponent){
-    btn.bgColor = "rgb(129, 66, 245)"
-    btn.txtColor = "white"
-  }
-
-  helloOutHover(btn: ButtonComponent){
-    btn.bgColor = "white"
-    btn.txtColor = "rgb(129, 66, 245)"
+  public helloOutHover(btn: ButtonComponent): void {
+    btn.bgColor = 'white';
+    btn.txtColor = 'rgb(129, 66, 245)';
   }
 
 }

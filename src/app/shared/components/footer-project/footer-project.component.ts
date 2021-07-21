@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'app-footer-project',
+  selector: 'ag-app-footer-project',
   templateUrl: './footer-project.component.html',
-  styleUrls: ['./footer-project.component.scss']
+  styleUrls: ['./footer-project.component.scss'],
 })
 export class FooterProjectComponent implements OnInit {
 
-  constructor() { }
+  public ngOnInit(): void { }
 
-  ngOnInit(): void {
+  public onHover(btn: ButtonComponent): void {
+    btn.bgColor = 'rgb(129, 66, 245)';
   }
 
-  onHover(btn: ButtonComponent){
-    btn.bgColor = "rgb(129, 66, 245)"
-  }
-
-  outHover(btn: ButtonComponent){
-    btn.bgColor = "rgb(13, 3, 102)"
-    btn.txtColor = "white"
+  public outHover(btn: ButtonComponent): void {
+    btn.bgColor = 'rgb(13, 3, 102)';
+    btn.txtColor = 'white';
   }
 
 }

@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Project } from '../../../Project';
+import { Project } from '../../../project';
 import { ProjectService } from '../../../services/project.service';
 
 @Component({
-  selector: 'app-proj-list',
+  selector: 'ag-app-proj-list',
   templateUrl: './proj-list.component.html',
-  styleUrls: ['./proj-list.component.scss']
+  styleUrls: ['./proj-list.component.scss'],
 })
 export class ProjListComponent implements OnInit {
-  projects: Project[] = [];
+  public projects: Project[] = [];
 
-  constructor(private projectService: ProjectService) { }
+  public constructor(private readonly projectService: ProjectService) { }
 
-  ngOnInit(): void {
-    this.projectService.getProjects().subscribe((projects) => this.projects = projects)
+  public ngOnInit(): void {
+    this.projectService.getProjects().subscribe((projects: Project[]): Project[] => this.projects = projects);
   }
-
-
 }

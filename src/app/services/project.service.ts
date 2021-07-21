@@ -1,17 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Project } from '../Project'
+
+import { Project } from '../project';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProjectService {
-  private apiUrl = "http://localhost:5000/projects";
+  private readonly apiUrl: string = 'http://localhost:5000/projects';
 
-  constructor(private http: HttpClient) { }
+  private constructor(private readonly http: HttpClient) { }
 
-  getProjects(): Observable<Project[]>{
+  public getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(this.apiUrl);
   }
 }

@@ -1,20 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-testimonial',
+  selector: 'ag-app-testimonial',
   templateUrl: './testimonial.component.html',
-  styleUrls: ['./testimonial.component.scss']
+  styleUrls: ['./testimonial.component.scss'],
 })
 export class TestimonialComponent implements OnInit {
-  @Input() imgSrc!: string;
-  @Input() testimonial!: string;
-  @Input() witness!: string;
-  @Input() witnessPosition!: string;
+  @Input() public imgSrc!: string;
+  @Input() public testimonial!: string;
+  @Input() public witness!: string;
+  @Input() public witnessPosition!: string;
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  public ngOnInit(): void { }
 
 }

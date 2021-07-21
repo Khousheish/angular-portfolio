@@ -1,20 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Project } from 'src/app/Project';
+import { Component, Input, OnInit } from '@angular/core';
+import { Project } from 'src/app/project';
 
 @Component({
-  selector: 'app-proj-card',
+  selector: 'ag-app-proj-card',
   templateUrl: './proj-card.component.html',
-  styleUrls: ['./proj-card.component.scss']
+  styleUrls: ['./proj-card.component.scss'],
 })
 export class ProjCardComponent implements OnInit {
-  @Input() project!: Project;
-  @Input() projectDescription!: string[];
-  imagesPath: string = "../../../assets/images/";
+  @Input() public project!: Project;
+  @Input() public projectDescription!: string[];
+  public imagesPath: string = '../../../assets/images/';
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  public ngOnInit(): void { }
 
 }
