@@ -1,13 +1,14 @@
 $navy: rgb(13, 3, 102);
 $lilac: rgb(129, 66, 245);
-$red: #ff0000;
+$red: rgb(255, 0, 0);
+$white: rgb(255, 255, 255);
 
 .start-proj-container {
   background-color: $navy;
   border: 1px $navy solid;
   border-radius: 25px;
   box-shadow: 0 0 4px $navy;
-  color: white;
+  color: $white;
   display: flex;
   flex-flow: row wrap;
   margin: auto;
@@ -36,7 +37,7 @@ $red: #ff0000;
   background-color: $navy;
   border: 2px $lilac solid;
   border-radius: 30px;
-  color: white;
+  color: $white;
   font-weight: bold;
   height: 50px;
   padding: 1%;

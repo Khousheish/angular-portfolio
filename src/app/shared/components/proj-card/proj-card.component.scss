@@ -1,11 +1,13 @@
 $white: rgb(255, 255, 255);
 $light-grey: rgb(242, 242, 242);
+$black: rgb(0, 0, 0);
+
 .card {
-  background-color: white;
-  border: solid white 1px;
+  background-color: $white;
+  border: solid $white 1px;
   border-radius: 25px;
   box-shadow: 0 0 4px $light-grey;
-  color: black;
+  color: $black;
   height: 100%;
   margin: 10px;
   max-width: 400px;

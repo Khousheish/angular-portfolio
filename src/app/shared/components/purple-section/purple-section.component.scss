@@ -1,6 +1,7 @@
 $purple: rgb(129, 66, 245);
+
 .purple-container {
-  background-color: purple;
+  background-color: $purple;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 300px;
   text-align: center;

@@ -1,16 +1,18 @@
 $light-grey: rgb(224, 222, 227);
 $white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+$shadow: rgb(242, 242, 242);
 
 h2 {
-  color: white;
+  color: $white;
   text-align: center;
 }
 
 .skill-container {
   background-color: $white;
   border-radius: 25px;
-  box-shadow: 0 0 4px rgb(242, 242, 242);
-  color: black;
+  box-shadow: 0 0 4px $shadow;
+  color: $black;
   display: inline-block;
   padding: 0;
   width: 60%;
@@ -30,7 +32,7 @@ h2 {
   border-right: solid $light-grey 1px;
 }
 
-.skill-container:after {
+.skill-container::after {
   clear: both;
 }
 
