@@ -10,20 +10,20 @@ $light-grey: rgb(224, 222, 227);
 }
 
 .selected-testimonial-btn-label {
-  background-color: $lilac;
+  display: inline-block;
+  margin: 5px;
   border: 2px $lilac solid;
   border-radius: 50%;
-  display: inline-block;
-  height: 10px;
-  margin: 5px;
+  background-color: $lilac;
   width: 10px;
+  height: 10px;
 }
 
 .unselected-testimonial-btn-label {
+  display: inline-block;
+  margin: 5px;
   border: 2px $light-grey solid;
   border-radius: 50%;
-  display: inline-block;
-  height: 10px;
-  margin: 5px;
   width: 10px;
+  height: 10px;
 }

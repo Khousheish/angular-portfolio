@@ -7,7 +7,7 @@ $light-grey: rgb(224, 222, 227);
 }
 
 hr {
-  border-color: $light-grey;
-  border-top: 0;
   margin-bottom: 10%;
+  border-top: 0;
+  border-color: $light-grey;
 }

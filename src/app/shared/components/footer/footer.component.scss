@@ -1,13 +1,15 @@
 $light-grey: rgb(224, 222, 227);
+
 .footer-quote {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
 }
 
 .social-div {
-  height: auto;
   margin-top: 5%;
+  height: auto;
 }
+
 .social-icon {
   border: 2px $light-grey solid;
   border-radius: 25px;
@@ -15,23 +17,23 @@ $light-grey: rgb(224, 222, 227);
 }
 
 .social-1 {
-  background-image: url('../../../../assets/images/github.svg');
-  background-size: 100% 100%;
   display: inline-block;
-  height: 40px;
   margin: 0;
   margin-right: 0.5%;
+  background-image: url('../../../../assets/images/github.svg');
+  background-size: 100% 100%;
   width: 40px;
+  height: 40px;
 }
 
 .social-2 {
-  background-image: url('../../../../assets/images/linkedin.png');
-  background-size: 100% 100%;
   display: inline-block;
-  height: 40px;
   margin: 0;
   margin-left: 0.5%;
+  background-image: url('../../../../assets/images/linkedin.png');
+  background-size: 100% 100%;
   width: 40px;
+  height: 40px;
 }
 
 .social-1:hover {

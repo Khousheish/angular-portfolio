@@ -9,4 +9,7 @@ if (environment.production) {
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch((err: Error): void => console.error(err));
+  .catch((err: Error): void => {
+    // tslint:disable-next-line: no-console
+    console.error(err);
+  });

@@ -4,18 +4,18 @@ $red: rgb(255, 0, 0);
 $white: rgb(255, 255, 255);
 
 .start-proj-container {
-  background-color: $navy;
+  display: flex;
+  position: relative;
+  top: -15%;
+  flex-flow: row wrap;
+  margin: auto;
   border: 1px $navy solid;
   border-radius: 25px;
   box-shadow: 0 0 4px $navy;
-  color: $white;
-  display: flex;
-  flex-flow: row wrap;
-  margin: auto;
+  background-color: $navy;
   padding: 2%;
-  position: relative;
-  top: -15%;
   width: 60%;
+  color: $white;
 }
 
 .start-proj-item {
@@ -33,7 +33,7 @@ $white: rgb(255, 255, 255);
   font-size: 20px;
 }
 
-.footerBtn {
-  width: 50%;
+.footer-btn {
   padding: 5%;
+  width: 50%;
 }

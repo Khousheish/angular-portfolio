@@ -101,6 +101,8 @@
       true,
       "dev",
       [
+        "@Models",
+        "@Environment"
       ]
     ],
     "no-inferred-empty-object-type": true,

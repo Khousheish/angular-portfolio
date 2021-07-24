@@ -4,32 +4,32 @@ $black: rgb(0, 0, 0);
 $shadow: rgb(242, 242, 242);
 
 h2 {
-  color: $white;
   text-align: center;
+  color: $white;
 }
 
 .skill-container {
-  background-color: $white;
+  display: inline-block;
   border-radius: 25px;
   box-shadow: 0 0 4px $shadow;
-  color: $black;
-  display: inline-block;
+  background-color: $white;
   padding: 0;
   width: 60%;
+  color: $black;
 }
 
 .left,
 .right,
 .center {
   float: left;
-  text-align: center;
-  vertical-align: baseline;
   width: 33%;
+  vertical-align: baseline;
+  text-align: center;
 }
 
 .center {
-  border-left: solid $light-grey 1px;
   border-right: solid $light-grey 1px;
+  border-left: solid $light-grey 1px;
 }
 
 .skill-container::after {
@@ -37,6 +37,6 @@ h2 {
 }
 
 ul {
-  list-style: none;
   padding: 0%;
+  list-style: none;
 }
