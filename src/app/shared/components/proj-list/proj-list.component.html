@@ -1,3 +1,9 @@
 <div class="proj-list-container">
-    <ag-app-proj-card *ngFor="let project of projects" [project]="project"></ag-app-proj-card>
+  <p-card *ngFor="let project of projects" [header]="project.title" [style]="{width: '360px'}"
+    styleClass="p-card-shadow" class="card">
+    <img src="{{ imgBaseUrl }}{{ project.img }}" />
+    <p>
+      {{ project.description }}
+    </p>
+  </p-card>
 </div>

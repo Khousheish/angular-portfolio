@@ -10,6 +10,7 @@ import { ProjectService } from '../../../services/project.service';
 })
 export class ProjListComponent implements OnInit {
   public projects: Project[] = [];
+  public imgBaseUrl: string = '../../../assets/images/';
 
   public constructor(private readonly projectService: ProjectService) { }
 
