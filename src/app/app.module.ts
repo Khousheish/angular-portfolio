@@ -1,9 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ButtonModule } from 'primeng/button';
 
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './shared/components/button/button.component';
 import { CoverComponent } from './shared/components/cover/cover.component';
 import { FooterProjectComponent } from './shared/components/footer-project/footer-project.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
@@ -22,7 +22,6 @@ import { WorkHistorySectionComponent } from './shared/components/work-history-se
   declarations: [
     AppComponent,
     HeaderComponent,
-    ButtonComponent,
     CoverComponent,
     PurpleSectionComponent,
     SectionComponent,
@@ -39,6 +38,7 @@ import { WorkHistorySectionComponent } from './shared/components/work-history-se
   imports: [
     BrowserModule,
     HttpClientModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

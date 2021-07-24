@@ -33,21 +33,7 @@ $white: rgb(255, 255, 255);
   font-size: 20px;
 }
 
-.proj-btn {
-  background-color: $navy;
-  border: 2px $lilac solid;
-  border-radius: 30px;
-  color: $white;
-  font-weight: bold;
-  height: 50px;
-  padding: 1%;
+.footerBtn {
   width: 50%;
-}
-
-.thing:hover {
-  color: $red;
-}
-
-.proj-btn:hover {
-  background-color: $lilac;
+  padding: 5%;
 }
