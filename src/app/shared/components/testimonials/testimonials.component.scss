@@ -1,10 +1,14 @@
+$light-grey: rgb(224, 222, 227);
+
 .testimonials-container {
   margin-top: 3%;
 }
 
 .testimonials-div {
-  margin-top: 7%;
+  margin-top: 40em;
   margin-bottom: 10%;
+  border-top: 0.01rem $light-grey solid;
+  padding-top: 5em;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

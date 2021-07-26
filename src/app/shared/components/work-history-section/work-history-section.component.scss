@@ -1,4 +1,5 @@
 $dark-grey: rgb(52, 51, 61);
+$light-grey: rgb(224, 222, 227);
 
 .companies-title {
   color: $dark-grey;
@@ -6,7 +7,9 @@ $dark-grey: rgb(52, 51, 61);
 }
 
 .companies-div {
-  margin-top: 7%;
+  margin-top: 17em;
+  border-top: 0.01rem $light-grey solid;
+  padding-top: 7rem;
   text-align: center;
 }
 
