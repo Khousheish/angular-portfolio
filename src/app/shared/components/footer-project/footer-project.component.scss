@@ -34,6 +34,12 @@ $white: rgb(255, 255, 255);
 }
 
 .footer-btn {
+  border-color: $lilac;
+  background-color: $lilac;
   padding: 5%;
   width: 50%;
+}
+
+.footer-btn:hover {
+  background-color: red;
 }
