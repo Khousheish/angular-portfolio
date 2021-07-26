@@ -1,7 +1,7 @@
 <div class="proj-list-container">
   <p-card *ngFor="let project of projects" [header]="project.title" [style]="{width: '360px'}"
     styleClass="p-card-shadow" class="card">
-    <img src="{{ imgBaseUrl }}{{ project.img }}" />
+    <img src="{{ imgBaseUrl }}{{ project.img }}" alt="Project Image"/>
     <p>
       {{ project.description }}
     </p>

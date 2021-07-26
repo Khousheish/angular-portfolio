@@ -1,4 +1,5 @@
 $light-grey: rgb(224, 222, 227);
+$lilac: rgb(129, 66, 245);
 
 .footer-quote {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,40 +11,26 @@ $light-grey: rgb(224, 222, 227);
   height: auto;
 }
 
-.social-icon {
-  border: 2px $light-grey solid;
-  border-radius: 25px;
-  padding: 0%;
-}
-
-.social-1 {
-  display: inline-block;
-  margin: 0;
-  margin-right: 0.5%;
-  background-image: url('../../../../assets/images/github.svg');
-  background-size: 100% 100%;
-  width: 40px;
-  height: 40px;
-}
-
-.social-2 {
-  display: inline-block;
-  margin: 0;
-  margin-left: 0.5%;
-  background-image: url('../../../../assets/images/linkedin.png');
-  background-size: 100% 100%;
-  width: 40px;
-  height: 40px;
-}
-
-.social-1:hover {
-  background-image: url('../../../../assets/images/github2.png');
-}
-
-.social-2:hover {
-  background-image: url('../../../../assets/images/linkedin2.png');
-}
-
 .section-list {
   color: $light-grey;
+}
+
+.icon {
+  border: 0.25rem solid $lilac;
+  border-radius: 50%;
+  padding: 0%;
+  color: $light-grey;
+  font-size: 3rem;
+}
+
+.icon:hover {
+  border: 0.25rem solid $light-grey;
+  border-radius: 50%;
+  background-color: $light-grey;
+  color: $lilac;
+  font-size: 3rem;
+}
+
+.icon-div{
+  margin: 0.5rem;
 }
