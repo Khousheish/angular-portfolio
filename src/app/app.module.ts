@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StoreModule } from '@ngrx/store';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 
@@ -17,7 +18,7 @@ import { TestimonialComponent } from './shared/components/testimonial/testimonia
 import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
 import { ToggleComponent } from './shared/components/toggle/toggle.component';
 import { WorkHistorySectionComponent } from './shared/components/work-history-section/work-history-section.component';
-import { StoreModule } from '@ngrx/store';
+import { projectReducer } from './shared/store/reducers/project.reducer';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { StoreModule } from '@ngrx/store';
     HttpClientModule,
     ButtonModule,
     CardModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({projects: projectReducer}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],
