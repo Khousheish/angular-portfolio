@@ -17,6 +17,7 @@ import { TestimonialComponent } from './shared/components/testimonial/testimonia
 import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
 import { ToggleComponent } from './shared/components/toggle/toggle.component';
 import { WorkHistorySectionComponent } from './shared/components/work-history-section/work-history-section.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { WorkHistorySectionComponent } from './shared/components/work-history-se
     HttpClientModule,
     ButtonModule,
     CardModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],
