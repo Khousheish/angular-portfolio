@@ -1,9 +1,13 @@
 <div class="proj-list-container">
-  <p-card *ngFor="let project of projects" [header]="project.title" [style]="{'width': '360px', 'border-radius': '30px'}"
+  <ng-container *ngIf = "projects$ | async; let projects">
+
+    <p-card *ngFor="let project of (projects.projects)" [header]="project.title" [style]="{'width': '360px', 'border-radius': '30px'}"
     styleClass="p-card-shadow" class="card">
     <img src="{{ imgBaseUrl }}{{ project.img }}" alt="Project Image"/>
     <p>
       {{ project.description }}
     </p>
   </p-card>
+</ng-container>
 </div>
+{{(projects$ | async) | json}}

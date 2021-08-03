@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Project } from '@Models/project.model';
+import { Actions, createEffect, CreateEffectMetadata, ofType } from '@ngrx/effects';
 import { ProjectService } from 'app/services/project.service';
-import { exhaustMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { exhaustMap, map, switchMap } from 'rxjs/operators';
 
-import { getProjects } from '../actions/project.actions';
+import { getProjects, getProjectsSuccess } from '../actions/project.actions';
 
 @Injectable()
 export class ProjectEffects {
 
-  $loadProjects = createEffect(() =>
+  private readonly $loadProjects: CreateEffectMetadata = createEffect(() =>
     this.action$.pipe(
       ofType(getProjects),
-      exhaustMap(() => this.projectService.getProjects()),
-    ), { dispatch: false }
-  )
+      switchMap((): Observable<Project[]> => this.projectService.getProjects()),
+      map((projects: Project[]) => getProjectsSuccess({ projects })) //projects to match the key of the obj in the prop
+    ),
+  );
 
   public constructor(private readonly action$: Actions, private readonly projectService: ProjectService) { }
 }

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { getProjects } from 'app/shared/store/actions/project.actions';
+import { ProjectState } from 'app/shared/store/project.state';
+import { projectSelector } from 'app/shared/store/selectors/project.selector';
+import { Observable } from 'rxjs';
 
-import { ProjectService } from '../../../services/project.service';
 import { Project } from '../../models/project.model';
 
 @Component({
@@ -10,20 +12,18 @@ import { Project } from '../../models/project.model';
   templateUrl: './proj-list.component.html',
   styleUrls: ['./proj-list.component.scss'],
 })
-export class ProjListComponent implements OnInit {
-  public projects: Project[] = [];
+export class ProjListComponent implements OnInit{
+  // public projects: Project[] = [];
   public imgBaseUrl: string = '../../../assets/images/';
 
-  public constructor(private readonly store: Store) { }
+  public projects$: Observable<Project[]> = this.store.pipe(select(projectSelector.selectProject));
+
+  public constructor(private readonly store: Store<ProjectState>) { }
 
   public ngOnInit(): void {
     // this.projectService.getProjects().subscribe((projects: Project[]): Project[] => this.projects = projects);
-    this.getAllProjects();
-
-  }
-
-  private getAllProjects(): void{
     this.store.dispatch(getProjects());
   }
+
 
 }

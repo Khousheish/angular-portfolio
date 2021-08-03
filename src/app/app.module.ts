@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 import { CoverComponent } from './shared/components/cover/cover.component';
@@ -18,8 +20,8 @@ import { TestimonialComponent } from './shared/components/testimonial/testimonia
 import { TestimonialsComponent } from './shared/components/testimonials/testimonials.component';
 import { ToggleComponent } from './shared/components/toggle/toggle.component';
 import { WorkHistorySectionComponent } from './shared/components/work-history-section/work-history-section.component';
+import { ProjectEffects } from './shared/store/effects/project.effect';
 import { projectReducer } from './shared/store/reducers/project.reducer';
-import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { EffectsModule } from '@ngrx/effects';
     ButtonModule,
     CardModule,
     StoreModule.forRoot({projects: projectReducer}, {}),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([ProjectEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25 }),
   ],
   providers: [],
   bootstrap: [AppComponent],
