@@ -19,6 +19,7 @@ import { TestimonialsComponent } from './shared/components/testimonials/testimon
 import { ToggleComponent } from './shared/components/toggle/toggle.component';
 import { WorkHistorySectionComponent } from './shared/components/work-history-section/work-history-section.component';
 import { projectReducer } from './shared/store/reducers/project.reducer';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { projectReducer } from './shared/store/reducers/project.reducer';
     ButtonModule,
     CardModule,
     StoreModule.forRoot({projects: projectReducer}, {}),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],
