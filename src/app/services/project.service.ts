@@ -10,7 +10,10 @@ import { Project } from '../shared/models/project.model';
 export class ProjectService {
   private readonly apiUrl: string = 'http://localhost:5000/projects';
 
-  private constructor(private readonly http: HttpClient) { }
+  private constructor(private readonly http: HttpClient) {
+
+
+  }
 
   public getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(this.apiUrl);
