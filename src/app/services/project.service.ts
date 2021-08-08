@@ -11,6 +11,7 @@ export class ProjectService {
   private readonly apiUrl: string = 'http://localhost:5000/projects';
 
   private constructor(private readonly http: HttpClient) {
+    console.log();
   }
 
   public getProjects(): Observable<Project[]> {
